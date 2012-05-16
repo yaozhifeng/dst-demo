@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Simulation Demo</title>
+<script language="jscript">
+	var simPath;
+			
+	var getHost = function(url)
+	{
+		var host = "null";
+		if(typeof url == "undefined"|| null == url)
+		{
+			url = window.location.href;
+		}
+		var regex = /.*\:\/\/([^\/]*).*/;
+		var match = url.match(regex);
+		if(typeof match != "undefined" && null != match)
+		{
+			host = match[1];
+		}
+		return host;
+	}
+
+	function ShowItem(index)
+	{
+	    if (index==1)
+	    {
+                    document.getElementById("stem1").className="show";
+                    document.getElementById("stem2").className="hide";
+                    document.getElementById("current1").className="sty1";
+                    document.getElementById("current2").className = "";
+                    simPath = "http://www.yaozhifeng.net/demo/items/3demotest1.ds4";
+                   
+	    }
+	    if (index==2)
+	    {
+                    document.getElementById("stem1").className="hide";
+                    document.getElementById("stem2").className="show";
+                    document.getElementById("current1").className = "";
+                    document.getElementById("current2").className = "sty1";
+                    simPath = "http://www.yaozhifeng.net/demo/items/3demotest2.ds4";
+	    }			    
+	    OpenSim(simPath)
+	}
+			 
+	function OpenSim(path)
+	{
+		dstctrl.Close();
+		dstctrl.ItemPath=path;
+	}   
+</script>	
+<link href="layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="ShowItem(1)">
+	<div class="tophead"><img src="images/simulatiom-demo_02.gif" /></div>
+	<div id="container">
+		<ul>
+		   <li><a id="current1" href="#" onclick="ShowItem(1)">simulation 1</a></li>
+		   <li><a id="current2" href="#" onclick="ShowItem(2)">simulation 2</a></li>	
+		</ul>
+		<hr>
+        <div id="stem1">
+			Please perform the following tasks:
+			<ol>
+				<li>Open Internet Explorer and open Microsoft home page (http://www.microsoft.com)</li>
+				<li>In Word application, input &quot;ATA DST Demo&quot;; set font as Verdana 12Pt, Bold, and blue, and change the horizontal alignment of text to Right.</li>
+				<li>Reboot the system.</li>
+			</ol>
+
+        </div>
+	<div id="stem2" class="hide">
+		Format hard disk partition E, and convert its file system from FAT32 to NTFS.
+	</div>
+	</div>
+		
+	<div class="right_content">		
+		<div>
+			<OBJECT id="dstctrl" style="LEFT: 0px; WIDTH: 800px;TOP: 0px; HEIGHT: 600px;float:left;" classid="CLSID:9BFA063C-C3F2-44E2-B128-82E20529E569" VIEWASTEXT>
+					<PARAM NAME="ResourcePath" VALUE="http://www.yaozhifeng.net/demo/items/resource.mdb">
+			</OBJECT>
+		</div>		
+	</div>
+	</div>
+
+	<div class="footerstyle">copyright ATA </div>
+</body>
+
+</html>

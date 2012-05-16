@@ -1,0 +1,25 @@
+body {top;
+	text-align: center;
+	margin-top: 10%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #3182B9;
+	background-image: url(images/s_1_03.gif);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+.content{height: 364px;width: 514px;border: 2px solid #1F557B;margin-left:30%;background-color: #F2F1ED;}
+*html .content{height: 364px;width: 514px;border: 2px solid #1F557B;background-color: #F2F1ED;margin-left:7%}
+*+html .content{height: 364px;width: 514px;border: 2px solid #1F557B;text-align: center;background-color: #F2F1ED;margin-left:7%}
+
+.toptitle {background: url(images/s_1_06.gif) repeat-x;height: 84px;text-align: center;}
+.font{font-size: 12px;color: #555553;line-height: 60px;}
+.button_download{background-color: #FFFFFF;background: url(images/s_1_13.gif) no-repeat;height: 55px;width: 212px;border: 0px solid #FFFFFF;}
+
+.bottom_font{background-color: #E2E1DC;height: 53px;font-size: 12px;color: #686865;margin-top:84px; line-height:53px;}
+*html .bottom_font{background-color: #E2E1DC;height: 53px;font-size: 12px;color: #686865;margin-top:75px; line-height:53px;}
+*+html .bottom_font{background-color: #E2E1DC;height: 53px;font-size: 12px;color: #686865;margin-top:73px; line-height:53px;}
+.font_left{float:left; margin-left:20px;}
+*html .font_left{ margin-top:15px;}
+.bottom_font li{display: inline;}
+.button_next{background: url(images/s_1_17.gif) no-repeat;height: 31px;width: 96px;border: 0px solid #FFFFFF;background-position: right center;float:right;margin:10px 10px 0;}
+
